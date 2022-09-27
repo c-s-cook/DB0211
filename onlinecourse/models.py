@@ -101,6 +101,7 @@ class Enrollment(models.Model):
     # Has a grade point for each question
     # Has question content
     # Other fields and methods you would like to design
+
 class Question(models.Model):
     lesson_id = models.ForeignKey(Course, on_delete=models.CASCADE)
     question_text = models.TextField()
@@ -125,7 +126,7 @@ class Question(models.Model):
 class Choice(models.Model):
     question_id = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.TextField()
-    is_correct = models.BooleanField
+    is_correct = models.BooleanField()
 
 
 
